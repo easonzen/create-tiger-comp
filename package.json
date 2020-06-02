@@ -1,6 +1,6 @@
 {
   "name": "create-tiger-comp",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "快速生成react组件开发模板",
   "main": "src/index.js",
   "scripts": {
@@ -9,12 +9,19 @@
   "bin": {
     "create-tiger-comp": "src/index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/easonzen/create-tiger-comp.git"
   },
   "keywords": [
-    "react组件"
+    "react",
+    "react component",
+    "react component template",
+    "react组件",
+    "react组件模板"
   ],
   "author": "scnznl@gmail.com",
   "license": "ISC",

@@ -51,21 +51,12 @@ const questions = [
         validate: function (input) {
             return !!input || '该字段不能为空';
         }
-    },
-    {
-        type: 'text',
-        name: 'entryFile',
-        initial: 'src/index.tsx',
-        message: '请输入项目入口文件:',
-        validate: function (input) {
-            return !!input || '该字段不能为空';
-        }
     }
 ];
 
 function getRootPackageJsonPath() {
     try {
-        const f = finder(__dirname);
+        const f = finder(process.cwd());
         let result;
 
         for (const v of f) {
@@ -143,28 +134,12 @@ function writePackageJson() {
     fs.writeFileSync(targetFilePath, sortPackageJson(JSON.stringify(packageConfig, null, 2)));
 }
 
-function replaceNameInReadme() {
-    const { description } = packageConfig;
-    const targetFilePath = path.join(targetDirectory, 'README.md');
-
-    if (fs.pathExistsSync(targetFilePath)) {
-        var data = fs.readFileSync(targetFilePath, 'utf8');
-
-        fs.outputFileSync(
-            targetFilePath,
-            data.replace(/\{name\}/g, componentName).replace(/\{description\}/g, description)
-        );
-    }
-}
-
 async function run() {
     await setConfigWithAnswer();
 
     await copyTemplateFiles();
 
     writePackageJson();
-
-    replaceNameInReadme();
 
     console.log(`%s ${componentName} component ready!`, chalk.green.bold('DONE'));
 }
