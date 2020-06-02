@@ -1,6 +1,6 @@
 {
   "name": "create-tiger-comp",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "快速生成react组件开发模板",
   "main": "src/index.js",
   "scripts": {

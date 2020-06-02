@@ -8,7 +8,6 @@ module.exports = {
     },
     peerDependencies: {
         '@babel/runtime': '^7.0.0',
-        lodash: '^4.17.15',
         react: '^16.13.1',
         'react-dom': '^16.13.1'
     }
