@@ -1,0 +1,34 @@
+{
+  "name": "create-tiger-comp",
+  "version": "1.0.0",
+  "description": "快速生成react组件开发模板",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "@tiger-comp/create-tiger-comp": "src/index.js",
+    "create-tiger-comp": "src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easonzen/create-tiger-comp.git"
+  },
+  "keywords": [
+    "react组件"
+  ],
+  "author": "scnznl@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easonzen/create-tiger-comp/issues"
+  },
+  "homepage": "https://github.com/easonzen/create-tiger-comp#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "exec-sh": "^0.3.4",
+    "find-package-json": "^1.2.0",
+    "fs-extra": "^9.0.0",
+    "prompts": "^2.3.2",
+    "sort-package-json": "^1.42.1"
+  }
+}
