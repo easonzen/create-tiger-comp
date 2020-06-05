@@ -144,7 +144,7 @@ async function reaplaceParamInLicense() {
 
         fs.outputFileSync(
             targetFilePath,
-            data.replace(/\{author\}/g, author).replace(/\{year\}/g, year)
+            data.replace(/\{author\}/g, `${author}@itiger.com`).replace(/\{year\}/g, year)
         );
     }
 }
