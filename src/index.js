@@ -134,10 +134,27 @@ function writePackageJson() {
     fs.writeFileSync(targetFilePath, sortPackageJson(JSON.stringify(packageConfig, null, 2)));
 }
 
+async function reaplaceParamInLicense() {
+    const targetFilePath = path.join(targetDirectory, 'LICENSE');
+
+    if (fs.pathExistsSync(targetFilePath)) {
+        let data = fs.readFileSync(targetFilePath, 'utf8');
+        const author = await getAuthor();
+        const year = new Date().getFullYear();
+
+        fs.outputFileSync(
+            targetFilePath,
+            data.replace(/\{author\}/g, author).replace(/\{year\}/g, year)
+        );
+    }
+}
+
 async function run() {
     await setConfigWithAnswer();
 
     await copyTemplateFiles();
+
+    await reaplaceParamInLicense();
 
     writePackageJson();
 
