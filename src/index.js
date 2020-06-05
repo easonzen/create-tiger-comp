@@ -110,7 +110,7 @@ async function getAuthor() {
         console.log('Stderr: ', e.stderr);
         console.log('Stdout: ', e.stdout);
 
-        return e;
+        return 'fed';
     }
 }
 
