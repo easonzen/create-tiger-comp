@@ -2,7 +2,7 @@ module.exports = {
     main: 'dist/index.js',
     module: 'dist/index.esm.js',
     types: 'dist/index.d.ts',
-    files: ['LICENSE', 'README.md', 'dist', 'src'],
+    files: ['LICENSE', 'dist', 'src'],
     scripts: {
         build: 'father-build'
     },
