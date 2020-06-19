@@ -4,7 +4,6 @@ module.exports = {
     types: 'dist/index.d.ts',
     files: ['LICENSE', 'dist', 'src'],
     peerDependencies: {
-        '@babel/runtime': '^7.0.0',
         react: '^16.13.1',
         'react-dom': '^16.13.1'
     }
